@@ -7,6 +7,10 @@ while True:
             points = float(points)
             if points <= 0:
                 print("There was a no earthquake!")
+            elif 0 < points < 2:
+                print("There was a micro earthquake!")
+            elif 8 <= points < 10:
+                print("There was a great earthquake!")
             elif points >= 10:
                 print("There was a meteoric earthquake!")
             else:
