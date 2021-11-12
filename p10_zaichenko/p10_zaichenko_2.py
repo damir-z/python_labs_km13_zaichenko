@@ -33,8 +33,7 @@ while True:
     while True:
         try:
             month = int(input("Enter a number of month: "))
-            print("\nIt's {} of {} and the amount of days is {}.".format(months[month - 1], year,
-                                                                         days_amount(intercalary_years, month, year)))
+            print("\nIt's {} of {} and the amount of days is {}.".format(months[month - 1], year, days_amount(intercalary_years, month, year)))
             break
         except ValueError:
             print("Error. Number of month must be an integer number. Try again!")
