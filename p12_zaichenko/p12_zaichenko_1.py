@@ -27,8 +27,8 @@ def search(dirs, filename, path = "/"):
     for element in dirs:
         if type(element) == tuple:
             result.extend(search(element[1], filename, path + element[0] + "/"))
-        if element == filename:
-            result.append(f"{path}{filename}")
+        elif element == filename:
+            result.append(f"{path + filename}")
     return result
 
 # ПЕРЕВІРКА
