@@ -3,8 +3,6 @@ import time
 import fileinput
 #import zipfile
 
-time1 = time.time()
-
 #archive = zipfile.ZipFile('archive.zip', 'r')
 males, females = dict(), dict()
 
@@ -41,5 +39,3 @@ for i in males:
 print()
 for i in females:
     print(i, females[i])
-
-print(f"\ntime: {time.time() - time1}")
