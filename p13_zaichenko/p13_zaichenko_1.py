@@ -3,14 +3,17 @@ with open("gadsby.txt", "r") as f:
 letters_list = list(map(str.lower, list(filter(str.isalpha, text))))
 alphabet = list("abcdefghijklmnopqrstuvwxyz")
 amounts = list(map(lambda x: round(100 * letters_list.count(x) / len(letters_list), 3), alphabet))
-sorted_amounts = list(reversed(sorted(amounts)))
 
-print("Sorted by amounts:\n")
-for i in range(len(sorted_amounts)):
-    print(f"{alphabet[amounts.index(sorted_amounts[i])]}: {sorted_amounts[i]}%")
-print("\nMust frequent five ones:\n")
-for i in range(5):
-    print(f"{alphabet[amounts.index(sorted_amounts[i])]}: {sorted_amounts[i]}%")
-print("\nMust rare five ones:\n")
-for i in range(5, 0, -1):
-    print(f"{alphabet[amounts.index(sorted_amounts[-i])]}: {sorted_amounts[-i]}%")
+result = dict()
+for i in sorted(amounts, reverse=True):
+    result[i] = dict(zip(amounts, alphabet))[i]
+
+print("Sorted by percent:\n")
+for i in result:
+    print(f"{result[i]} : {i}%")
+print("\nFive of the most frequent:\n")
+for i in range(0,5):
+    print(f"{result[sorted(result)[i]]} : {sorted(result)[i]}%")
+print("\nFive of the most rare:\n")
+for i in range(1,6):
+    print(f"{result[sorted(result)[i]]} : {sorted(result)[i]}%")
