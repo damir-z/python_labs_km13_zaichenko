@@ -15,5 +15,5 @@ print("\nFive of the most frequent:\n")
 for i in range(1,6):
     print(f"{result[sorted(result)[-i]]} : {sorted(result)[-i]}%")
 print("\nFive of the most rare:\n")
-for i in range(5):
+for i in range(0,5):
     print(f"{result[sorted(result)[i]]} : {sorted(result)[i]}%")
