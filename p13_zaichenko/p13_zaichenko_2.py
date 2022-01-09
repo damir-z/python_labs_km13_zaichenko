@@ -11,15 +11,8 @@ for i in range(1880, 2020):
                 if int(str(j)[int(j.rfind(","))+1::]) > female[1]:
                     female[1], female[0] = int(str(j)[int(j.rfind(","))+1::]), str(j)[:int(j.find(",")):]
 
-    if male[0] in males:
-        males[male[0]] += 1
-    else:
-        males[male[0]] = 1
-
-    if female[0] in females:
-        females[female[0]] += 1
-    else:
-        females[female[0]] = 1
+    males[male[0]] = males.get(male[0], 0) + 1
+    females[female[0]] = females.get(female[0], 0) + 1
 
 males = dict(sorted(males.items(), key=lambda item: item[1], reverse= True))
 females = dict(sorted(females.items(), key=lambda item: item[1], reverse= True))
