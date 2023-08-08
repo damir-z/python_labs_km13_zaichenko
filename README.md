@@ -1,4 +1,4 @@
-"Python Programming Course Labs Repository 🐍
+# Python Programming Course Labs Repository 🐍
 
 Welcome to my GitHub repository, a treasure trove of hands-on experiences from my Python programming course. Through this repository, you'll find a showcase of my practical skills and explorations in Python, covering essential concepts and advanced techniques.
 
