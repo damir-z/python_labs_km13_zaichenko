@@ -1,4 +1,4 @@
-Certainly, here are the descriptions of each laboratory task with a focus on the act of learning or exploring:
+!Python Programming Course Labs Repository 🐍
 
 1. 🔍 **Data Input and Output (p4):** Learning efficient ways to handle data input and output, ensuring smooth interaction between programs and external data sources.
 
